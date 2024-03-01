@@ -1,0 +1,49 @@
+{
+    "name": "laravel-notification-channels/messagebird",
+    "description": "MessageBird notification channel for Laravel 5.x",
+    "homepage": "https://github.com/laravel-notification-channels/messagebird",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Peter Steenbergen",
+            "email": "psteenbergen@gmail.com",
+            "homepage": "https://3ws.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "illuminate/notifications": "^5.5 || ^6.0 || ^7.0 || ^8.0",
+        "illuminate/support": "^5.5 || ^6.0 || ^7.0 || ^8.0",
+        "illuminate/queue": "^5.5 || ^6.0 || ^7.0 || ^8.0",
+        "guzzlehttp/guzzle": "^6.2 || ^7.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "phpunit/phpunit": "^7.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotificationChannels\\Messagebird\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NotificationChannels\\Messagebird\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotificationChannels\\Messagebird\\MessagebirdServiceProvider"
+            ]
+        }
+    }
+}
